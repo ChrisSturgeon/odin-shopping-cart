@@ -11,8 +11,8 @@ const App = function () {
   const [cart, setCart] = useState([]);
 
   return (
-    <div>
-      <Navbar />
+    <div className="wrapper">
+      <Navbar cart={cart} />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="shop" element={<Shop />}></Route>

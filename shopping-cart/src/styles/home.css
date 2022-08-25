@@ -1,0 +1,20 @@
+.home-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.record {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.home-left {
+  display: flex;
+  align-items: center;
+}
+
+.home-left h1 {
+  font-size: 3rem;
+}

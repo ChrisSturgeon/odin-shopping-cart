@@ -1,0 +1,17 @@
+.nav-bar {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 3rem;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
