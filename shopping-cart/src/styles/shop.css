@@ -1,7 +1,13 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
   justify-content: space-between;
-  background-color: rgb(148, 220, 132);
+  padding: 60px;
+}
+
+@media screen and (max-width: 800px) {
+  .cards {
+    padding: 20px 5px;
+  }
 }

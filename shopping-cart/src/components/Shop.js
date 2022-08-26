@@ -13,6 +13,7 @@ export default function Shop(props) {
           return (
             <Item
               key={record.sku}
+              artwork={record.artwork}
               album={record.album}
               artist={record.artist}
               price={record.price}

@@ -1,14 +1,28 @@
 .item-card {
-  margin: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  border: 1px solid red;
-  height: 25rem;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  background-color: rgba(255, 255, 255, 0.165);
+  color: black;
+  border-radius: 3px;
+  min-height: 20rem;
+  font-weight: 700;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.item-card img {
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-qty {
   display: flex;
   gap: 5px;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
