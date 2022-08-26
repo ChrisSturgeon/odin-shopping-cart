@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
 
 export default function Navbar(props) {
+  const totalVal = Math.round((props.totalPrice + Number.EPSILON) * 100) / 100;
+
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
@@ -13,7 +15,15 @@ export default function Navbar(props) {
         <Link to="cart">Cart</Link>
         <Link to="about">About</Link>
       </div>
-      <div>{props.cart.length} items in cart</div>
+      <div className="summary">
+        <div>{props.items} items in cart</div>
+        {props.totalPrice > 0 ? (
+          <div>£{totalVal} total</div>
+        ) : (
+          <div> &nbsp;</div>
+        )}
+        <button>View Cart</button>
+      </div>
     </div>
   );
 }

@@ -126,6 +126,7 @@ table {
 body {
   height: 100%;
   background-color: #fed142;
+  font-family: 'Assistant', sans-serif;
 }
 .wrapper {
   padding: 1.5rem;
