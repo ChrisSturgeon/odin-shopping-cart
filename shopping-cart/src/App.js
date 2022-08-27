@@ -16,16 +16,32 @@ const App = function () {
   const addCart = (sku, quantity) => {
     const skus = data;
     const item = skus.find((record) => record.sku === sku);
-    const order = { ...item, qty: quantity };
-    setCart((prevCart) => prevCart.concat(order));
+
+    const isNew = cart.every((item) => {
+      return item.sku !== sku;
+    });
+
+    if (isNew) {
+      const order = { ...item, quantity: quantity };
+      setCart((prevCart) => prevCart.concat(order));
+    } else {
+      const index = cart.findIndex((record) => {
+        return record.sku === sku;
+      });
+
+      const revisedQuantity = cart[index].quantity + quantity;
+      const cartCopy = [...cart];
+      cartCopy[index].quantity = revisedQuantity;
+      setCart(cartCopy);
+    }
   };
 
   useEffect(() => {
-    const count = cart.reduce((prev, current) => prev + current.qty, 0);
+    const count = cart.reduce((prev, current) => prev + current.quantity, 0);
     setItemsCount(count);
 
     const price = cart.reduce(
-      (prev, current) => prev + current.price * current.qty,
+      (prev, current) => prev + current.price * current.quantity,
       0
     );
     setTotalPrice(price);
@@ -41,7 +57,7 @@ const App = function () {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="shop" element={<Shop add={addCart} />}></Route>
-        <Route path="cart" element={<Cart />}></Route>
+        <Route path="cart" element={<Cart cart={cart} />}></Route>
         <Route path="about" element={<About />}></Route>
       </Routes>
     </div>

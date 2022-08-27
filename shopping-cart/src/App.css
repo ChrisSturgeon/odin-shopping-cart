@@ -132,3 +132,7 @@ body {
   padding: 1.5rem;
   height: 100%;
 }
+
+button {
+  cursor: pointer;
+}

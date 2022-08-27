@@ -7,7 +7,6 @@ export default function Shop(props) {
   const catalogue = data;
   return (
     <div>
-      <h1>Shop</h1>
       <div className="cards">
         {catalogue.map((record) => {
           return (
