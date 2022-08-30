@@ -1,30 +1,47 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../styles/navbar.css';
+import { useState } from 'react';
 
-export default function Navbar(props) {
-  const totalVal = Math.round((props.totalPrice + Number.EPSILON) * 100) / 100;
-
+export default function Navbar() {
   return (
     <div className="nav-bar">
-      <Link className="logo" to="/">
+      <NavLink className="logo" to="/">
         React Records
-      </Link>
+      </NavLink>
       <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="shop">Shop</Link>
-
-        <Link to="about">About</Link>
-      </div>
-      <div className="summary">
-        <div>{props.items} items in cart</div>
-        {props.totalPrice > 0 ? (
-          <div>£{totalVal} total</div>
-        ) : (
-          <div> &nbsp;</div>
-        )}
-        <button>
-          <Link to="cart">View Cart</Link>
-        </button>
+        <NavLink
+          to="shop"
+          style={({ isActive }) => ({
+            textDecoration: isActive ? 'underline' : null,
+            textDecorationColor: isActive ? 'white' : null,
+            textDecorationThickness: isActive ? '3px' : null,
+            textUnderlineOffset: isActive ? '5px' : null,
+          })}
+        >
+          Shop
+        </NavLink>
+        <NavLink
+          to="about"
+          style={({ isActive }) => ({
+            textDecoration: isActive ? 'underline' : null,
+            textDecorationColor: isActive ? 'white' : null,
+            textDecorationThickness: isActive ? '3px' : null,
+            textUnderlineOffset: isActive ? '5px' : null,
+          })}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="contact"
+          style={({ isActive }) => ({
+            textDecoration: isActive ? 'underline' : null,
+            textDecorationColor: isActive ? 'white' : null,
+            textDecorationThickness: isActive ? '3px' : null,
+            textUnderlineOffset: isActive ? '5px' : null,
+          })}
+        >
+          Contact
+        </NavLink>
       </div>
     </div>
   );

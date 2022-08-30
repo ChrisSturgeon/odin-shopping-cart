@@ -1,0 +1,28 @@
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  gap: 30px;
+  text-align: center;
+}
+
+.contact-main h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-main {
+    justify-content: flex-start;
+    padding: 30px 10px;
+  }
+}

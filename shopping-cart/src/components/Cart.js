@@ -1,26 +1,40 @@
 import CartItem from './CartItem';
+
 import '../styles/cart.css';
 
 export default function Cart(props) {
-  return (
-    <div className="cart-body">
-      <h1 className="cart-title">Your cart</h1>
-      {props.cart.map((item) => {
-        return (
-          <CartItem
-            key={item.sku}
-            sku={item.sku}
-            artwork={item.artwork}
-            album={item.album}
-            artist={item.artist}
-            quantity={item.quantity}
-            price={item.price}
-            remove={props.remove}
-          />
-        );
-      })}
+  const totalVal = Math.round((props.totalPrice + Number.EPSILON) * 100) / 100;
 
-      <div>Checkout</div>
-    </div>
-  );
+  if (totalVal > 0) {
+    return (
+      <div className="cart-body">
+        <div className="cart-header">
+          <h1 className="total">Total: £{totalVal}</h1>
+          <button>Checkout {props.itemsCount} items</button>
+        </div>
+        <h2>Order summary</h2>
+
+        {props.cart.map((item) => {
+          return (
+            <CartItem
+              key={item.sku}
+              sku={item.sku}
+              artwork={item.artwork}
+              album={item.album}
+              artist={item.artist}
+              quantity={item.quantity}
+              price={item.price}
+              remove={props.remove}
+            />
+          );
+        })}
+      </div>
+    );
+  } else {
+    return (
+      <div className="cart-body" style={{ textAlign: 'center' }}>
+        You don't have anything in your cart yet!
+      </div>
+    );
+  }
 }

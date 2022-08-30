@@ -5,6 +5,7 @@ export default function Item(props) {
   const [qty, setQty] = useState(1);
   const [purchased, setPurchased] = useState(false);
   const path = props.artwork;
+  const [addText, setAddText] = useState('Add to cart');
 
   const increment = () => {
     setQty((prevQty) => prevQty + 1);
@@ -21,7 +22,7 @@ export default function Item(props) {
       <img src={path} alt="record artwork"></img>
       <div className="card-bottom">
         <div>{props.album}</div>
-        <div>{props.artist}</div>
+        <div className="artist">{props.artist}</div>
         {qty > 1 ? (
           <div>
             £{props.price} each / £
@@ -41,9 +42,13 @@ export default function Item(props) {
             props.add(props.id, qty);
             setQty(1);
             setPurchased(true);
+            setAddText('Success!');
+            setTimeout(() => {
+              setAddText('Add more');
+            }, 750);
           }}
         >
-          {purchased ? 'Added!' : 'Add to cart'}
+          {addText}
         </button>
       </div>
     </div>

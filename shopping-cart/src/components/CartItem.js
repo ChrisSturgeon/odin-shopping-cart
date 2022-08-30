@@ -8,15 +8,13 @@ export default function CartItem(props) {
   return (
     <div className="cart-item">
       <img src={path} alt="record artwork"></img>
-      <div className="item-details">
+      <div className="record-details">
         <div>{props.album}</div>
         <div>{props.artist}</div>
-        <div>Quantity: {props.quantity}</div>
-        <div>
-          £{props.price} each / £{totalPrice} total
-        </div>
       </div>
-
+      <div className="quantity">Quantity: {props.quantity}</div>
+      <div>£{props.price} each</div>
+      <div className="total-price">£{totalPrice} total</div>
       <button
         onClick={() => {
           console.log(props.sku);

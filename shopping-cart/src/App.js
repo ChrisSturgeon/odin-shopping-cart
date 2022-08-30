@@ -6,6 +6,7 @@ import Shop from './components/Shop';
 import Cart from './components/Cart';
 import About from './components/About';
 import Home from './components/Home';
+import Contact from './components/Contact';
 import data from './stock';
 
 const App = function () {
@@ -63,15 +64,28 @@ const App = function () {
 
   return (
     <div className="wrapper">
-      <Navbar items={itemsCount} totalPrice={totalPrice} />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="shop" element={<Shop add={addCart} />}></Route>
         <Route
-          path="cart"
-          element={<Cart cart={cart} remove={removeCart} />}
+          path="shop"
+          element={
+            <Shop add={addCart} totalPrice={totalPrice} items={itemsCount} />
+          }
+        ></Route>
+        <Route
+          path="/shop/cart"
+          element={
+            <Cart
+              cart={cart}
+              remove={removeCart}
+              totalPrice={totalPrice}
+              itemsCount={itemsCount}
+            />
+          }
         ></Route>
         <Route path="about" element={<About />}></Route>
+        <Route path="contact" element={<Contact />}></Route>
       </Routes>
     </div>
   );

@@ -1,12 +1,31 @@
 import '../styles/shop.css';
-
+import { Link } from 'react-router-dom';
 import Item from './Item';
 import data from '../stock';
 
 export default function Shop(props) {
+  const totalVal = Math.round((props.totalPrice + Number.EPSILON) * 100) / 100;
   const catalogue = data;
   return (
     <div>
+      <div>
+        {props.totalPrice > 0 ? (
+          <div className="summary">
+            <div>{props.items} items in cart</div>
+            <div>£{totalVal} total</div>
+
+            <Link to="cart">
+              <button>View Cart</button>
+            </Link>
+          </div>
+        ) : (
+          <div className="summary empty">
+            <Link to="cart">
+              <button>View Cart</button>
+            </Link>
+          </div>
+        )}
+      </div>
       <div className="cards">
         {catalogue.map((record) => {
           return (
