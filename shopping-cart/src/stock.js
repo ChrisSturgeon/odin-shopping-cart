@@ -6,6 +6,10 @@ import soundOfSilver from './imgs/sound-of-silver.jpeg';
 import woman from './imgs/woman.jpeg';
 import isThisIt from './imgs/is-this-it.jpeg';
 import overgrown from './imgs/overgrown.jpeg';
+import amnesiac from './imgs/amnesiac.jpeg';
+import doolittle from './imgs/doolittle.jpeg';
+import dookie from './imgs/dookie.jpeg';
+import kindOfBlue from './imgs/kind-of-blue.jpeg';
 
 const data = [
   {
@@ -64,6 +68,34 @@ const data = [
     album: 'Overgrown',
     price: 14.99,
     artwork: overgrown,
+  },
+  {
+    sku: 9,
+    artist: 'Radiohead',
+    album: 'Amnesiac',
+    price: 15.99,
+    artwork: amnesiac,
+  },
+  {
+    sku: 10,
+    artist: 'The Pixies',
+    album: 'Doolittle',
+    price: 13.99,
+    artwork: doolittle,
+  },
+  {
+    sku: 11,
+    artist: 'Green Day',
+    album: 'Dookie',
+    price: 16.99,
+    artwork: dookie,
+  },
+  {
+    sku: 12,
+    artist: 'Miles Davis',
+    album: 'Kind of Blue',
+    price: 12.99,
+    artwork: kindOfBlue,
   },
 ];
 

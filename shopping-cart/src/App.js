@@ -36,6 +36,16 @@ const App = function () {
     }
   };
 
+  const removeCart = (sku) => {
+    const cartCopy = [...cart];
+    const index = cartCopy.findIndex((record) => {
+      return record.sku === sku;
+    });
+
+    cartCopy.splice(index, 1);
+    setCart(cartCopy);
+  };
+
   useEffect(() => {
     const count = cart.reduce((prev, current) => prev + current.quantity, 0);
     setItemsCount(count);
@@ -57,7 +67,10 @@ const App = function () {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="shop" element={<Shop add={addCart} />}></Route>
-        <Route path="cart" element={<Cart cart={cart} />}></Route>
+        <Route
+          path="cart"
+          element={<Cart cart={cart} remove={removeCart} />}
+        ></Route>
         <Route path="about" element={<About />}></Route>
       </Routes>
     </div>

@@ -1,0 +1,17 @@
+.cart-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px 15vw;
+}
+
+.cart-title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 800px) {
+  .cart-body {
+    padding: 20px 0px;
+  }
+}

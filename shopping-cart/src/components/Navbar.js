@@ -12,7 +12,7 @@ export default function Navbar(props) {
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="shop">Shop</Link>
-        <Link to="cart">Cart</Link>
+
         <Link to="about">About</Link>
       </div>
       <div className="summary">
@@ -22,7 +22,9 @@ export default function Navbar(props) {
         ) : (
           <div> &nbsp;</div>
         )}
-        <button>View Cart</button>
+        <button>
+          <Link to="cart">View Cart</Link>
+        </button>
       </div>
     </div>
   );

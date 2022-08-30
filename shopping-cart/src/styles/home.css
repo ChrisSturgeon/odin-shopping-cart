@@ -13,9 +13,9 @@
   overflow: hidden;
 }
 
-.record:hover {
+/* .record:hover {
   transform: rotate(90deg);
-}
+} */
 
 .home-left {
   display: flex;
