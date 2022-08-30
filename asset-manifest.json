@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/odin-shopping-cart/static/css/main.82d50f4c.css",
+    "main.js": "/odin-shopping-cart/static/js/main.2954b6bb.js",
+    "static/media/woman.jpeg": "/odin-shopping-cart/static/media/woman.bab4ce073a263969e577.jpeg",
+    "static/media/doolittle.jpeg": "/odin-shopping-cart/static/media/doolittle.331168c7025127667670.jpeg",
+    "static/media/dookie.jpeg": "/odin-shopping-cart/static/media/dookie.717ca3e46b78ec06b700.jpeg",
+    "static/media/overgrown.jpeg": "/odin-shopping-cart/static/media/overgrown.79880bbc9e2f77757815.jpeg",
+    "static/media/shop.jpeg": "/odin-shopping-cart/static/media/shop.de07bb56eca052ca1329.jpeg",
+    "static/media/amnesiac.jpeg": "/odin-shopping-cart/static/media/amnesiac.46a843181ca4616184c8.jpeg",
+    "static/media/kind-of-blue.jpeg": "/odin-shopping-cart/static/media/kind-of-blue.70d4b6a213388abfb207.jpeg",
+    "static/media/is-this-it.jpeg": "/odin-shopping-cart/static/media/is-this-it.044b57561505bb0f1272.jpeg",
+    "static/media/alopecia.jpeg": "/odin-shopping-cart/static/media/alopecia.b3233f3002c2cd6f1a1f.jpeg",
+    "static/media/a-love-supreme.jpeg": "/odin-shopping-cart/static/media/a-love-supreme.299d2de623c7f2823a52.jpeg",
+    "static/media/sound-of-silver.jpeg": "/odin-shopping-cart/static/media/sound-of-silver.182efb91d0f1f68bec85.jpeg",
+    "static/media/illmatic.jpeg": "/odin-shopping-cart/static/media/illmatic.7daa05102d9fa9375910.jpeg",
+    "static/media/grace.jpeg": "/odin-shopping-cart/static/media/grace.636b5dfc348b4314d3ee.jpeg",
+    "static/media/record.svg": "/odin-shopping-cart/static/media/record.cccc9068261d0403d51c2e15862c04ea.svg",
+    "index.html": "/odin-shopping-cart/index.html",
+    "main.82d50f4c.css.map": "/odin-shopping-cart/static/css/main.82d50f4c.css.map",
+    "main.2954b6bb.js.map": "/odin-shopping-cart/static/js/main.2954b6bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82d50f4c.css",
+    "static/js/main.2954b6bb.js"
+  ]
+}
