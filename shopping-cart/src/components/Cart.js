@@ -9,7 +9,9 @@ export default function Cart(props) {
     return (
       <div className="cart-body">
         <div className="cart-header">
-          <h1 className="total">Total: £{totalVal}</h1>
+          <h1 data-testid="totalValue" className="total">
+            Total: £{totalVal}
+          </h1>
           <button>Checkout {props.itemsCount} items</button>
         </div>
         <h2>Order summary</h2>

@@ -34,7 +34,7 @@ export default function Item(props) {
 
         <div className="card-qty">
           <button onClick={decrement}>-</button>
-          <div>{qty}</div>
+          <div data-testid="quantity">{qty}</div>
           <button onClick={increment}>+</button>
         </div>
         <button

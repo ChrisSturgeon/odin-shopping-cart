@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function Navbar() {
   return (
     <div className="nav-bar">
-      <NavLink className="logo" to="/">
+      <NavLink data-testid="homeLink" className="logo" to="/">
         React Records
       </NavLink>
       <div className="nav-links">

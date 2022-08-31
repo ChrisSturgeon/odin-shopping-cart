@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem tests matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="cart-item"
+  >
+    <img
+      alt="record artwork"
+    />
+    <div
+      class="record-details"
+    >
+      <div>
+        Bitches Brew
+      </div>
+      <div>
+        Miles Davis
+      </div>
+    </div>
+    <div
+      class="quantity"
+    >
+      Quantity: 
+    </div>
+    <div>
+      £17.99 each
+    </div>
+    <div
+      class="total-price"
+    >
+      £NaN total
+    </div>
+    <button>
+      <i
+        class="fa-solid fa-trash-can"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

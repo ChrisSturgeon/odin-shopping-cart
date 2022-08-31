@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item Tests matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="item-card"
+  >
+    <img
+      alt="record artwork"
+    />
+    <div
+      class="card-bottom"
+    >
+      <div>
+        Giant Steps
+      </div>
+      <div
+        class="artist"
+      >
+        John Coltrane
+      </div>
+      <div>
+        £17.99
+      </div>
+      <div
+        class="card-qty"
+      >
+        <button>
+          -
+        </button>
+        <div
+          data-testid="quantity"
+        >
+          1
+        </div>
+        <button>
+          +
+        </button>
+      </div>
+      <button>
+        Add to cart
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

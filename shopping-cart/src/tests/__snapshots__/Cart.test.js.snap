@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cart tests matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="cart-body"
+  >
+    <div
+      class="cart-header"
+    >
+      <h1
+        class="total"
+        data-testid="totalValue"
+      >
+        Total: £55
+      </h1>
+      <button>
+        Checkout 10 items
+      </button>
+    </div>
+    <h2>
+      Order summary
+    </h2>
+  </div>
+</DocumentFragment>
+`;

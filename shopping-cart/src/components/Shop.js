@@ -11,9 +11,8 @@ export default function Shop(props) {
       <div>
         {props.totalPrice > 0 ? (
           <div className="summary">
-            <div>{props.items} items in cart</div>
-            <div>£{totalVal} total</div>
-
+            <div data-testid="totalItems">{props.items} items in cart</div>
+            <div data-testid="totalValue">£{totalVal} total</div>
             <Link to="cart">
               <button>View Cart</button>
             </Link>
